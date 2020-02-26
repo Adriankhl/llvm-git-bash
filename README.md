@@ -3,7 +3,7 @@ This is a guide of compiling softwares with [LLVM](https://github.com/llvm/llvm-
 
 Visual Studio comes with an out-of-the-box support of LLVM, cmake, and ninja. However, if you don't want to rely on Microsoft's workflow too much, it is not that easy to configure your environment correctly. This guide provide informations that help you to set up your development environment. 
 
-You still have to use Windows SDK and maybe some other tools from Visual Studio. The motivation of this guide is to minimize the dependency on Microsoft's tools, so that you can rely on other (open source) tools develop your software, while you should be able to go back to the powerful Visual Studio to develop your project if you want to do so. 
+You still have to use Windows SDK and maybe some other tools from Visual Studio. The motivation of this guide is to minimize the dependency on Microsoft's tools, so that you can rely on other (open source) tools to develop your software, while you should be able to go back to the powerful Visual Studio to develop your project if you want to do so. 
 
 Note: you may also consier the [MSYS2](https://www.msys2.org/) project if you want to go further and drop the dependency on Windows SDK. 
 
@@ -21,5 +21,17 @@ In my opinion, CMake + Ninja + LLVM is a really nice combo for software developm
 
 ## Extract environment from developer powershell
 
+Visual Studio 2019 comes with a Developer Powershell, where environment variables are pre-defined. You can view the variable by:
+
 `Get-ChildItem Env: | Format-Table -AutoSize -wrap`
+
+Run the following command export the variables into a csv file`Env.csv`.
+
 `Get-ChildItem Env: | Export-CSV Env.csv`
+
+Now, you have to turn the `Path`, `LIB`, and `INCLUDE` variables to a suitable format for Git Bash. 
+Copy or download the [python script](script/python/env_translate.py), run:
+
+`python env_translate.py Env.csv`
+
+
