@@ -10,7 +10,7 @@ Note: you may also consier the [MSYS2](https://www.msys2.org/) project if you wa
 ## Prerequisites
 * [Git Bash](https://gitforwindows.org/) (you may also consider the built-in Git Bash in [cmder](https://github.com/cmderdev/cmder/releases))
 * [LLVM](https://github.com/llvm/llvm-project/releases)
-* [Python](https://www.python.org/downloads/)
+* [Python](https://www.python.org/downloads/) and `pandas` package.
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) (Minimally, you can download `Build Tools for Visual Studio 2019` and install MSVC and Windows 10 SDK)
 
 Optional recommendations:
@@ -18,7 +18,7 @@ Optional recommendations:
 * [CMake](https://cmake.org/download)
 * [Ninja](https://github.com/ninja-build/ninja/releases)
 
-Say you install LLVM in `D:\Program\LLVM`, the path in Git Bash is represented as `/d/Program/LLVM`. The binaries of LLVM should be inside `/d/Program/LLVM/bin`. Add `export PATH='/d/Program/LLVM/bin':$PATH` in your `~/.bashrc` so that the binaries (`clang.exe`, `lld.exe`, etc.) can be found automatically. Do the same if you installed python, cmake or ninja. You should also add the `Scripts` folder of your python to the `PATH` such that you can use `pip`.
+Say you install LLVM in `D:\Program\LLVM`, the path in Git Bash is represented as `/d/Program/LLVM`. The binaries of LLVM should be inside `/d/Program/LLVM/bin`. Add `export PATH='/d/Program/LLVM/bin':$PATH` in your `~/.bashrc` so that the binaries (`clang.exe`, `lld.exe`, etc.) can be found automatically. Do the same if you installed python, cmake or ninja. You may also add the `Scripts` folder of your python to the `PATH` such that you can use `pip`. Then you can install `pandas` by `pip install pandas`
 
 ## Extract environment from developer powershell
 
