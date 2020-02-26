@@ -50,7 +50,7 @@ Important: there is a `python` in the `env.sh` (and `env64.sh`) but it is not so
 
 ## Recommended extra step
 
-After you execute `source env.sh`, some tools that are provided by Git Bash are overrided by the tools provided by Microsoft since the have exactly the same name, such as `find` or `link`. Therefore, it is recommended that you can use alias or bash script to create two commands to change the `PATH` variable - one prepare for the development environment and one return to the original Git Bash environment. You can run something like `llvmdev` before you want to compile your project and run something like `undev` if you want to `find` a file afterwards.
+After you execute `source env.sh`, some tools that are provided by Git Bash are overrode by the tools provided by Microsoft since they have exactly the same name, such as `find` or `link`. Therefore, it is recommended that you can use alias or bash script to create two commands to change the `PATH` variable - one prepare for the development environment and one return to the original Git Bash environment. You can run something like `llvmdev` before you want to compile your project and run something like `undev` if you want to `find` a file afterwards.
 
 ## Examples
 
