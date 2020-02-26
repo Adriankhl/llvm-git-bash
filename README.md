@@ -13,7 +13,7 @@ Note: you may also consider the [MSYS2](https://www.msys2.org/) project if you w
 * [Git Bash](https://gitforwindows.org/) (you may also consider the built-in Git Bash in [cmder](https://github.com/cmderdev/cmder/releases))
 * [LLVM](https://github.com/llvm/llvm-project/releases)
 * [Python](https://www.python.org/downloads/) and `pandas` package.
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) (Minimally, you can download `Build Tools for Visual Studio 2019` and install MSVC and Windows 10 SDK)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) (Minimally, you can download `Build Tools for Visual Studio 2019` and install MSVC and Windows 10 SDK, you can also use the bundled cmake, ninja, and LLVM)
 
 Optional recommendations:
 
