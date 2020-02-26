@@ -42,7 +42,7 @@ Copy or download the [python script](script/python/env_translate.py), run:
 * `env_original.sh`: Original format of environment variables
 * `env_all.sh`: Converted Git Bash format of environment variables, shouldn't be able to execute directly since `(x86)` in variable names is not allowed in Git Bash
 * `env.sh`: export `PATH`, `LIB`, and `INCLUDE` in Git Bash format
-* `env64.sh`: basically `env.sh` where all `x86` are converted to `x64` to use 64bit library(excrept `(x86)` which should only exist in the name `Program Files (x86)`)
+* `env64.sh`: basically `env.sh` where all `x86` are converted to `x64` to use 64bit library (excrept `(x86)` which should only exists in the name `Program Files (x86)`)
 
 Depends on whether you want to build 32bit or 64bit binary, do `source env.sh` or `source env64.sh` in your `.bashrc`.
 
