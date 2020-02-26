@@ -24,7 +24,7 @@ Say you install LLVM in `D:\Program\LLVM`, the path in Git Bash is represented a
 
 ## Extract environment from developer powershell
 
-Visual Studio 2019 comes with a Developer Powershell, where environment variables are pre-defined. You can view the variable by:
+Visual Studio 2019 comes with a Developer Powershell, where environment variables are pre-defined. You can view the variable by opening the shell and run:
 
 `Get-ChildItem Env: | Format-Table -AutoSize -wrap`
 
