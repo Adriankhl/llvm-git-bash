@@ -54,7 +54,7 @@ After you execute `source env.sh`, some tools that are provided by Git Bash are 
 
 ## Examples
 
-As far as I know, not many open source softwares can be successfully compiled if you follow the approach in this guide. For example, if the project is developed based on a `.sln` file, you have no choice but to use `MSBuild` and/or Visual Studio IDE. Fortunately, unlike MinGW, LLVM tools are designed to be an (almost) drop-in replacement of Microsoft's tools, zero or relatively small tweaks are necessary if you want to build CMake or Scons projects which are orginally designed to build with Visual Studio. Here are some examples that can be successfully built, feel free to make more suggestions by PR.
+As far as I know, not many open source softwares can be successfully compiled if you strictly follow the approach in this guide. For example, if the project is developed based on a `.sln` file, you have no choice but to use `MSBuild` and/or Visual Studio IDE. Fortunately, unlike MinGW, LLVM tools are designed to be an (almost) drop-in replacement of Microsoft's tools, zero or relatively small tweaks are necessary if you want to build CMake or Scons projects which are orginally designed to build with Visual Studio. Here are some examples that can be successfully built, feel free to make more suggestions by PR.
 
 * [Aseprite](examples/Aseprite.md)
 * [Godot](examples/Godot.md)
