@@ -19,7 +19,7 @@ or
 
 and then manually edit `src/CMakeLists.txt`: 
 
-change `set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /LTCG")` to
+modify `set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /LTCG")` to
 
 ```
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
@@ -30,7 +30,7 @@ else()
 endif()
 ```
 
-Now change the `clang_win` and `win_vc` below to your LLVM and Visual studio `VC` folders and do:
+Now modify the `clang_win` and `win_vc` below to your LLVM and Visual studio `VC` folders and do:
 ```
 export PATH="${PWD}/depot_tools:${PATH}"
 cd depot_tools
@@ -43,7 +43,7 @@ ninja -C out/Release skia
 Ignore the `Error: client not configured; see 'gclient config'`.
 
 
-Finally, change the `SKIA_DIR` and `SKIA_OUT_DIR` below to your skia directories, recent cmake can recognize the Git Bash directory name style (`/d/something`) if you run it in the shell. And run: 
+Finally, modify the `SKIA_DIR` and `SKIA_OUT_DIR` below to your skia directories, recent cmake can recognize the Git Bash directory name style (`/d/something`) if you run it in the shell. And run: 
 
 ```
 cd ../aseprite
