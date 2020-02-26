@@ -1,6 +1,6 @@
 # Godot
 
-[Godot](https://github.com/godotengine/godot) is an assume open source game engine. The build instruction is based on [Godot documentation](https://docs.godotengine.org/en/3.2/development/compiling/compiling_for_windows.html). Remember to prepare your environment as mentioned in the [guide](https://github.com/Adriankhl/llvm-git-bash.git/READ.md). Additionally, install `scons` by `pip install scons`
+[Godot](https://github.com/godotengine/godot) is an assume open source game engine. The build instruction is based on [Godot documentation](https://docs.godotengine.org/en/3.2/development/compiling/compiling_for_windows.html). Remember to prepare your environment as mentioned in the [guide](https://github.com/Adriankhl/llvm-git-bash/blob/master/README.md). Additionally, install `scons` by `pip install scons`
 
 * Tested version: 3.2
 
