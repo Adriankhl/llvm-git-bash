@@ -6,7 +6,7 @@ Visual Studio comes with an out-of-the-box support of LLVM, cmake, and ninja. Ho
 
 You still have to use Windows SDK and maybe some other tools from Visual Studio. The motivation of this guide is to minimize the dependency on Microsoft's tools and the Visual Studio IDE, so that you can rely on other (open source) tools to develop your software, while you should be able to easily go back to the powerful Visual Studio to develop your project if you want to do so. 
 
-Note: you may also consier the [MSYS2](https://www.msys2.org/) project if you want to go further and drop the dependency on Windows SDK, check [llvm-mingw](https://github.com/mstorsjo/llvm-mingw.git) for a working version of LLVM-MINGW toolchain.
+Note: you may also consider the [MSYS2](https://www.msys2.org/) project if you want to go further and drop the dependency on Windows SDK, check [llvm-mingw](https://github.com/mstorsjo/llvm-mingw.git) for a working version of LLVM-MINGW toolchain.
 
 ## Prerequisites
 
