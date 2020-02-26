@@ -1,5 +1,5 @@
 # Aseprite
-[Aseprite](https://github.com/aseprite/aseprite) is a pixel-art editor and a sprite editor. Note that it is a "source available" software instead of an "open source" software. Basically the build follow the [instruction](https://github.com/aseprite/aseprite/blob/master/INSTALL.md) with a few tweaks. You should use python 2 instead of python 3 for this, just `export` your python 2 to `PATH`. Remember to prepare your environment as mentioned in the [guide](../READ.md).
+[Aseprite](https://github.com/aseprite/aseprite) is a pixel-art editor and a sprite editor. Note that it is a "source available" software instead of an "open source" software. Basically the build follow the [instruction](https://github.com/aseprite/aseprite/blob/master/INSTALL.md) with a few tweaks. You should use python 2 instead of python 3 for this, just `export` your python 2 to `PATH`. Remember to prepare your environment as mentioned in the [guide](https://github.com/Adriankhl/llvm-git-bash/blob/master/README.md).
 
 * Tested version: v1.2.16.3
 
