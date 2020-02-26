@@ -44,7 +44,7 @@ Copy or download the [python script](script/python/env_translate.py), run:
 * `env.sh`: export `PATH`, `LIB`, and `INCLUDE` in Git Bash format
 * `env64.sh`: basically `env.sh` where all `x86` are converted to `x64` to use 64bit library (excrept `(x86)` which should only exists in the name `Program Files (x86)`)
 
-Depends on whether you want to build 32bit or 64bit binary, do `source env.sh` or `source env64.sh` in your `.bashrc`.
+Depends on whether you want to build 32bit or 64bit binary, do `source env.sh` or `source env64.sh` in your `~/.bashrc`.
 
 Important: there is a `python` in the `env.sh` (and `env64.sh`) but it is not something that you should use, make sure that your working python path is in front of the `PATH` you just add, check `which python` to see if it correctly finds your python.
 
