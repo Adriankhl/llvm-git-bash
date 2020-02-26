@@ -20,7 +20,7 @@ Optional recommendations:
 * [CMake](https://cmake.org/download)
 * [Ninja](https://github.com/ninja-build/ninja/releases)
 
-Say you install LLVM in `D:\Program\LLVM`, the path in Git Bash is represented as `/d/Program/LLVM`. The binaries of LLVM should be inside `/d/Program/LLVM/bin`. Add `export PATH='/d/Program/LLVM/bin':$PATH` in your `~/.bashrc` so that the binaries (`clang.exe`, `lld.exe`, etc.) can be found automatically. Do the same if you installed python, cmake or ninja. You may also add the `Scripts` folder of your python to the `PATH` such that you can use `pip`. Then you can install `pandas` by `pip install pandas`
+Say you install LLVM in `D:\Program\LLVM`, the path in Git Bash is represented as `/d/Program/LLVM`. The binaries of LLVM should be located inside `/d/Program/LLVM/bin`. Add `export PATH='/d/Program/LLVM/bin':$PATH` in your `~/.bashrc` so that the binaries (`clang.exe`, `lld.exe`, etc.) can be found automatically. Do the same if you installed python, cmake or ninja. You may also add the `Scripts` folder of your python to the `PATH` such that you can use `pip`. Then you can install `pandas` by `pip install pandas`
 
 ## Extract environment from developer powershell
 
