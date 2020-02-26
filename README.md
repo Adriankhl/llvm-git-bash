@@ -40,7 +40,7 @@ Copy or download the [python script](script/python/env_translate.py), run:
 4 files will be generated: 
 
 * `env_original.sh`: Original format of environment variables
-* `env_all.sh`: Converted Git Bash format of environment variables, shouldn't be able to execute directly since `(x86)` in variable name is not allowed in Git Bash
+* `env_all.sh`: Converted Git Bash format of environment variables, cannot be executed directly since `(x86)` in variable name is not allowed in Git Bash
 * `env.sh`: export `PATH`, `LIB`, and `INCLUDE` in Git Bash format
 * `env64.sh`: basically `env.sh` where all `x86` are converted to `x64` to use 64bit library (excrept `(x86)` which should only exists in the name `Program Files (x86)`)
 
