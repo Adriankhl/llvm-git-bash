@@ -1,5 +1,5 @@
 # Aseprite
-[Aseprite](https://github.com/aseprite/aseprite) is a pixel-art editor and a sprite editor. Note that it is a "source available" software instead of an "open source" software. Basically the build follow the [instruction](https://github.com/aseprite/aseprite/blob/master/INSTALL.md) with a few tweaks. You should use python 2 instead of python 3 for this, just `export` your python 2 to `PATH`. Remember to prepare your environment as mentioned in the [guide](../READ.md).
+[Aseprite](https://github.com/aseprite/aseprite) is a pixel-art editor and a sprite editor. Note that it is a "source available" software instead of an "open source" software. Basically the build follow the [instruction](https://github.com/aseprite/aseprite/blob/master/INSTALL.md) with a few tweaks. You should use python 2 instead of python 3 for this, just `export` your python 2 to `PATH`. Remember to prepare your environment as mentioned in the [guide](https://github.com/Adriankhl/llvm-git-bash/blob/master/README.md).
 
 * Tested version: v1.2.16.3
 
@@ -19,7 +19,7 @@ or
 
 and then manually edit `src/CMakeLists.txt`: 
 
-change `set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /LTCG")` to
+modify `set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /LTCG")` to
 
 ```
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
@@ -30,7 +30,7 @@ else()
 endif()
 ```
 
-Now change the `clang_win` and `win_vc` below to your LLVM and Visual studio `VC` folders and do:
+Now modify the `clang_win` and `win_vc` below to your LLVM and Visual studio `VC` folders and do:
 ```
 export PATH="${PWD}/depot_tools:${PATH}"
 cd depot_tools
@@ -43,7 +43,7 @@ ninja -C out/Release skia
 Ignore the `Error: client not configured; see 'gclient config'`.
 
 
-Finally, change the `SKIA_DIR` and `SKIA_OUT_DIR` below to your skia directories, recent cmake can recognize the Git Bash directory name style (`/d/something`) if you run it in the shell. And run: 
+Finally, modify the `SKIA_DIR` and `SKIA_OUT_DIR` below to your skia directories, recent cmake can recognize the Git Bash directory name style (`/d/something`) if you run it in the shell. And run: 
 
 ```
 cd ../aseprite

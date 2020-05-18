@@ -2,8 +2,6 @@ import pandas as pd
 import sys
 import os
 import posixpath
-p = "G:\Engineering\Software_Development\python\Tool"
-p.replace(os.sep, posixpath.sep)
 
 
 def process_file(env):
@@ -28,8 +26,10 @@ def process_file(env):
     # output 1: full list of variable
     df_out = ("export" + " " + df["key"] + "=" + df["bash_value"]).dropna().copy()
 
-    # Process PATH, LIB and INCLUDE for minimally working set of variables
-    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE)$")].copy()
+    # Copy PATH, LIB, INCLUDE and WindowsSdkDir to new dataframe for another bash script
+    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE|WindowsSdkDir)$")].copy()
+
+    # Process PATH, LIB and INCLUDE 
     re1 = "([\w\./]*" + "(?:include|bin|lib)/[\d\.]+/" + "[\w\./]*)"
     df1["windows_sdk"] = df1["bash_value"].str.findall(
 	        re1).apply(lambda x: list(set(x))).str.join(sep=":") # avoid duplicate by list set
@@ -45,6 +45,9 @@ def process_file(env):
     df1["full"] = df1["full"].str.replace(r"[']+", "'")
 
     df1.loc[df1["key"] == "PATH", "full"] = "$PATH:" + df1[df1["key"] == "PATH"]["full"]
+    
+    # Copy WindowsSdkDir from the original dataframe
+    df1.loc[df1["key"] == "WindowsSdkDir", "full"] = df[df["key"] == "WindowsSdkDir"]["bash_value"]
 
     # output 2
     df1_out = ("export" + " " + df1["key"] + "=" + df1["full"]).dropna().copy()
