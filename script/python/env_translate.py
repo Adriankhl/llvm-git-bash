@@ -27,7 +27,7 @@ def process_file(env):
     df_out = ("export" + " " + df["key"] + "=" + df["bash_value"]).dropna().copy()
 
     # Copy PATH, LIB, INCLUDE and WindowsSdkDir to new dataframe for another bash script
-    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE|WindowsSdkDir)$")].copy()
+    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE|WindowsSdkDir|VCToolsInstallDir)$")].copy()
 
     # Process PATH, LIB and INCLUDE 
     re1 = "([\w\./]*" + "(?:include|bin|lib)/[\d\.]+/" + "[\w\./]*)"
@@ -48,6 +48,9 @@ def process_file(env):
     
     # Copy WindowsSdkDir from the original dataframe
     df1.loc[df1["key"] == "WindowsSdkDir", "full"] = df[df["key"] == "WindowsSdkDir"]["bash_value"]
+
+    # Copy VCToolsInstallDir from the original dataframe
+    df1.loc[df1["key"] == "VCToolsInstallDir", "full"] = df[df["key"] == "VCToolsInstallDir"]["bash_value"]
 
     # output 2
     df1_out = ("export" + " " + df1["key"] + "=" + df1["full"]).dropna().copy()
