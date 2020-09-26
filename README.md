@@ -23,7 +23,7 @@ Optional recommendations:
 The quick start guide assume these install location in Git bash notation:
 
 Scoop: `/d/packages/scoop`
-MSVC build tool: `/d/Program/MSVC/BuildTools`
+MSVC build tool: `/d/Program/MSVC`
 Windows SDK: `/d/Program/WindowsSDK`
 Directory for storing script: `/d/EnvScripts`
 
@@ -64,7 +64,7 @@ pip install pandas
 Output all the environment in from the native tools command prompt for VS 2019 to `EnvVar.csv` in the script directory
 ```
 cd /d/EnvScripts
-cmd "/C D:\Program\MSVC\BuildTools\VC\Auxiliary\Build\vcvars64.bat & env > EnvVar.csv"
+cmd "/C D:\Program\MSVC\VC\Auxiliary\Build\vcvars64.bat & env > EnvVar.csv"
 ```
 
 Convert the Windows path into Git bash's path by the [python script](script/python/env_translate.py)
