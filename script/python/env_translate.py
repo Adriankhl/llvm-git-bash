@@ -27,13 +27,13 @@ def process_file(env):
     df_out = ("export" + " " + df["key"] + "=" + df["bash_value"]).dropna().copy()
 
     # Copy PATH, LIB, INCLUDE and WindowsSdkDir to new dataframe for another bash script
-    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE|WindowsSdkDir|VCToolsInstallDir)$")].copy()
+    df1 = df[df["key"].str.match("^(PATH|LIB|INCLUDE|WindowsSdkDir|VCToolsInstallDir|VCINSTALLDIR)$")].copy()
 
     # Process PATH, LIB and INCLUDE 
-    re1 = "([\w\./]*" + "(?:include|bin|lib)/[\d\.]+/" + "[\w\./]*)"
+    re1 = "([\w\./ \(\)]*" + "(?:include|bin|lib)/[\d\.]+/" + "[\w\./]*)"
     df1["windows_sdk"] = df1["bash_value"].str.findall(
 	        re1).apply(lambda x: list(set(x))).str.join(sep=":") # avoid duplicate by list set
-    re2 = "([\w\./]*" + "VC/Tools/MSVC" + "[\w\./]*)"
+    re2 = "([\w\./ \(\)]*" + "VC/Tools/MSVC" + "[\w\./]*)"
     df1["msvc"] = df1["bash_value"].str.findall(
 	        re2).apply(lambda x: list(set(x))).str.join(sep=":") # avoid duplicate by list set
     df1["full"] = df1["windows_sdk"]
@@ -51,6 +51,11 @@ def process_file(env):
 
     # Copy VCToolsInstallDir from the original dataframe
     df1.loc[df1["key"] == "VCToolsInstallDir", "full"] = df[df["key"] == "VCToolsInstallDir"]["bash_value"]
+
+    # Copy VCToolsInstallDir from the original dataframe
+    df1.loc[df1["key"] == "VCINSTALLDIR", "full"] = df[df["key"] == "VCINSTALLDIR"]["bash_value"]
+
+
 
     # output 2
     df1_out = ("export" + " " + df1["key"] + "=" + df1["full"]).dropna().copy()
